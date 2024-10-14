@@ -54,6 +54,7 @@ class _SplashViewState extends ConsumerState<SplashView> with _SplashViewListenM
   }
 }
 
+// 4 - 1.04dk
 mixin _SplashViewListenMixin on ConsumerState<SplashView> {
   void listenAndNavigate(
     StateNotifierProvider<SplashProvider, SplashState> provider,
