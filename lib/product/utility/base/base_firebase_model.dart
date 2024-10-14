@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_news_app/product/utility/exception/custom_exception.dart';
 
 // 3.vid 56
+// firebase  parse islemini tek bir yerde yapma
 mixin IdModel {
   String? get id;
 }

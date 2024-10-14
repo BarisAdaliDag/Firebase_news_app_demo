@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_news_app/feature/home/home_view.dart';
 import 'package:firebase_news_app/feature/login/login_view.dart';
+import 'package:firebase_news_app/feature/splash/splash_view.dart';
 import 'package:firebase_news_app/firebase_options.dart';
+import 'package:firebase_news_app/product/constants/index.dart';
 import 'package:firebase_news_app/product/initialize/application_start.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,12 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: StringConstants.appName,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: const SplashView(),
     );
   }
 }

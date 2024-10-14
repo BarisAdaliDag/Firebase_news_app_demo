@@ -13,5 +13,7 @@ enum PlatformEnum {
     }
 
     throw Exception('Platform unused please check!');
+    //buray dusmemesi lazim ne kadar cok ecception atarsa o kadar daha iyi.
+    // Proje cikti hatayi gorursun
   }
 }

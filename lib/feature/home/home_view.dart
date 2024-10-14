@@ -19,6 +19,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     final response = news.withConverter(
+      //3. vid 50dk
       fromFirestore: (snapshot, options) {
         // final jsonBody = snapshot.data();
         // if (jsonBody != null) {
