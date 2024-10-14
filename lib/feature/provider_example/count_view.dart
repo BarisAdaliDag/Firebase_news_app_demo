@@ -1,17 +1,17 @@
-import 'package:firebase_news_app/feature/login/login_provider.dart';
+import 'package:firebase_news_app/feature/provider_example/count_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LoginView extends ConsumerStatefulWidget {
-  const LoginView({super.key});
+class CountView extends ConsumerStatefulWidget {
+  const CountView({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _LoginViewState();
 }
 
-class _LoginViewState extends ConsumerState<LoginView> {
-  final loginProvider = StateNotifierProvider<LoginProvider, int>((ref) {
-    return LoginProvider();
+class _LoginViewState extends ConsumerState<CountView> {
+  final loginProvider = StateNotifierProvider<CountProvider, int>((ref) {
+    return CountProvider();
   });
 
   @override

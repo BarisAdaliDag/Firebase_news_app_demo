@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LoginProvider extends StateNotifier<int> {
-  LoginProvider() : super(0);
+class CountProvider extends StateNotifier<int> {
+  CountProvider() : super(0);
 
   void increment() {
     state++;

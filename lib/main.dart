@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_news_app/feature/home/home_view.dart';
-import 'package:firebase_news_app/feature/login/login_view.dart';
+import 'package:firebase_news_app/feature/provider_example/count_view.dart';
 import 'package:firebase_news_app/feature/splash/splash_view.dart';
 import 'package:firebase_news_app/firebase_options.dart';
 import 'package:firebase_news_app/product/constants/index.dart';
