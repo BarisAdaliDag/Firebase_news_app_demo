@@ -1,5 +1,5 @@
 import 'package:firebase_news_app/core/kartal/kartal_extension.dart';
-import 'package:firebase_news_app/feature/home/home_view.dart';
+import 'package:firebase_news_app/feature/provider_example/firebase_working_example.dart';
 import 'package:firebase_news_app/feature/splash/splash_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -66,7 +66,7 @@ mixin _SplashViewListenMixin on ConsumerState<SplashView> {
       }
       if (next.isRedirectHome != null) {
         if (next.isRedirectHome!) {
-          context.navigateToPage(const HomeView());
+          context.navigateToPage(const FirebaseExampleView());
         } else {
           // false
         }

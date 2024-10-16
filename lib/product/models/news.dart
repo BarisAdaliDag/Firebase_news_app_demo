@@ -2,8 +2,8 @@ import 'package:equatable/equatable.dart';
 
 import 'package:firebase_news_app/product/utility/base/base_firebase_model.dart';
 
-class NewsModel extends Equatable with IdModel, BaseFirebaseModel<NewsModel> {
-  NewsModel({
+class News extends Equatable with IdModel, BaseFirebaseModel<News> {
+  News({
     this.category,
     this.categoryId,
     this.title,
@@ -21,14 +21,14 @@ class NewsModel extends Equatable with IdModel, BaseFirebaseModel<NewsModel> {
   @override
   List<Object?> get props => [category, categoryId, title, backgroundImage, id];
 
-  NewsModel copyWith({
+  News copyWith({
     String? category,
     String? categoryId,
     String? title,
     String? backgroundImage,
     String? id,
   }) {
-    return NewsModel(
+    return News(
       category: category ?? this.category,
       categoryId: categoryId ?? this.categoryId,
       title: title ?? this.title,
@@ -48,8 +48,8 @@ class NewsModel extends Equatable with IdModel, BaseFirebaseModel<NewsModel> {
   }
 
   @override
-  NewsModel fromJson(Map<String, dynamic> json) {
-    return NewsModel(
+  News fromJson(Map<String, dynamic> json) {
+    return News(
       category: json['category'] as String?,
       categoryId: json['categoryId'] as String?,
       title: json['title'] as String?,

@@ -32,7 +32,10 @@ dependencies:
   firebase_auth: ^5.3.1
   firebase_auth_web: ^5.8.13
   firebase_ui_auth: ^1.1.15
-  # firebase_ui_oauth_google: ^1.0.22
+  firebase_ui_oauth_google: ^1.0.22
+# usteki google sign ui olusturuyor calismasi icin altaki kutuphane ihtiyac var
+  google_sign_in: ^6.2.1
+
   # firebase_storage: ^11.0.15
 
   shared_preferences: ^2.0.18

@@ -1,10 +1,10 @@
-// import 'package:flutter_firebase_full_news_app/product/initialize/app_cache.dart';
+import 'package:firebase_news_app/product/initialize/app_cache.dart';
 
-// enum CacheItems {
-//   token;
+// 5 - 46dk
+enum CacheItems {
+  token;
 
-//   String get read => AppCache.instance.sharedPreferences.getString(name) ?? '';
+  String get read => AppCache.instance.sharedPreferences.getString(name) ?? '';
 
-//   Future<bool> write(String value) =>
-//       AppCache.instance.sharedPreferences.setString(name, value);
-// }
+  Future<bool> write(String value) => AppCache.instance.sharedPreferences.setString(name, value);
+}
