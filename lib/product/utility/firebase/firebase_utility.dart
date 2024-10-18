@@ -1,6 +1,7 @@
 import 'package:firebase_news_app/product/utility/base/base_firebase_model.dart';
 import 'package:firebase_news_app/product/utility/firebase/firebase_collections.dart';
 
+// 7 - 31 dakika acikliyor
 mixin FirebaseUtility {
   Future<List<T>?> fetchList<T extends IdModel, R extends BaseFirebaseModel<T>>(
     R data,
@@ -12,7 +13,7 @@ mixin FirebaseUtility {
         return data.fromFirebase(snapshot);
       },
       toFirestore: (value, options) {
-        return {};
+        return {}; // set islemi yapmadigi icin data.toJson() sildi cunku sinirladik  IdModel, R extends BaseFirebaseModel<T>
       },
     ).get();
 

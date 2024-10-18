@@ -1,4 +1,4 @@
-import 'package:firebase_news_app/feature/provider_example/count_provider.dart';
+import 'package:firebase_news_app/feature/notlar/provider_example/count_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

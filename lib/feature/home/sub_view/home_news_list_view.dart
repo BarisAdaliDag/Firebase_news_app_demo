@@ -12,7 +12,7 @@ class HomeListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final news = FirebaseCollections.news.reference;
+    final news = FirebaseCollections.news.reference; // FirebaseFirestore.instance.collection("news")
 
     final response = news.withConverter(
       fromFirestore: (snapshot, options) {

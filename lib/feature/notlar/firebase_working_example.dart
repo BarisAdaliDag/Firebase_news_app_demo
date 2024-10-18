@@ -65,6 +65,7 @@ class _HomeListView extends StatelessWidget {
               return ListView.builder(
                 itemCount: values.length,
                 shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
                     child: Column(

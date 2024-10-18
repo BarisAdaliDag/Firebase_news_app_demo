@@ -16,7 +16,7 @@ class HomeNotifier extends StateNotifier<HomeState> with FirebaseUtility {
   List<Tag> get fullTagList => _fullTagList;
 
   Future<void> fetchNews() async {
-    final newsCollectionReference = FirebaseCollections.news.reference;
+    final newsCollectionReference = FirebaseCollections.news.reference; // FirebaseFirestore.instance.collection("news")
     final response = await newsCollectionReference.withConverter(
       fromFirestore: (snapshot, options) {
         return News().fromFirebase(snapshot);
@@ -34,6 +34,7 @@ class HomeNotifier extends StateNotifier<HomeState> with FirebaseUtility {
 
   Future<void> fetchTags() async {
     final items = await fetchList<Tag, Tag>(const Tag(), FirebaseCollections.tag);
+    //fetchNews()  kisa hali bunu  with FirebaseUtility saglatiyor 7-32 dk
     state = state.copyWith(tags: items);
     _fullTagList = items ?? [];
   }
@@ -92,3 +93,26 @@ class HomeState extends Equatable {
     );
   }
 }
+
+
+// //stateNotifier yaz
+// class HomeNotifier extends StateNotifier<HomeState> {
+//   HomeNotifier() : super(const HomeState());
+//   // void fetchNews() async {
+//   //   final newsCollectionReference = FirebaseCollections.news.reference;
+//   //   final response = await newsCollectionReference.withConverter(
+//   //     fromFirestore: (snapshot, options) {
+//   //       return News().fromFirebase(snapshot);
+//   //     },
+//   //     toFirestore: (value, options) {
+//   //       return value.toJson();
+//   //     },
+//   //   ).get();
+// }
+
+// class HomeState extends Equatable {
+//   const HomeState();
+
+//   @override
+//   List<Object?> get props => [];
+// }
